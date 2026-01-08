@@ -1,6 +1,7 @@
 import express from 'express';
-
-import homeRouter from './routers/home.js';
+import dotenv from 'dotenv';
+import homeRouter from './routers/home.router.js';
+dotenv.config();
 // import categoryRouter from './routers/category.js';
 
 const app = express();
