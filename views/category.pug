@@ -1,0 +1,10 @@
+extends template
+
+block content
+  .container.mt-4
+    h1.text-center.mb-4= 'Category'
+    div.d-flex.flex-column
+      ul
+        each item in items
+          li(style=('font-size: 20px; font-weight: 600'))
+            a(href=`/category/${item}`)= item
