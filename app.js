@@ -1,9 +1,8 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import homeRouter from './routers/home.router.js';
-dotenv.config();
 import categoryRouter from './routers/category.router.js';
-import downloaderRouter from './routers/download.router.js';
+dotenv.config();
 
 const app = express();
 app.set('view engine', 'pug');
@@ -20,8 +19,6 @@ app.use(express.static(join(__dirname, 'public')));
 
 app.use('/', homeRouter);
 app.use('/category', categoryRouter);
-app.use('/download', downloaderRouter)
-
 
 app.use((req, res)=> {
   res.status(404).send('Page not found | 404')
