@@ -2,7 +2,7 @@ import { Router } from "express";
 import { getGoods } from "../utilities/goods.js";
 import { getRandom } from "../utilities/get_random.js";
 import path from "path";
-import fs from 'fs/promises';
+import fs from 'fs';
 const router = Router();
 
 router.get("/", async (req, res) => {
