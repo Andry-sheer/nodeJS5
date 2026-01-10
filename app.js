@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import homeRouter from './routers/home.router.js';
 dotenv.config();
 import categoryRouter from './routers/category.router.js';
+import downloaderRouter from './routers/download.router.js';
 
 const app = express();
 app.set('view engine', 'pug');
@@ -19,6 +20,7 @@ app.use(express.static(join(__dirname, 'public')));
 
 app.use('/', homeRouter);
 app.use('/category', categoryRouter);
+app.use('/download', downloaderRouter)
 
 
 app.use((req, res)=> {
